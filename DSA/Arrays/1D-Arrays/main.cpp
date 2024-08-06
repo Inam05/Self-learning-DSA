@@ -42,5 +42,13 @@ int main()
     int marks[5] = {1, 2, 4, 5};
     cout << "The element at index 0 is " << marks[0] << endl;
 
-
+    // Array Operations
+    /*
+    1- Traversal  = visiting every element once in an array
+    2- Insertion  = include some other element in an array (at beginning , at the end and at the given index)
+    3- Deletion   = Delete a desire element and re-arrang it again (at beginning , at the end and at the given index)
+    4- Searching  = Search an element at any index
+    5- Sorting    = Descending or Ascending
+    */
+    
 }
