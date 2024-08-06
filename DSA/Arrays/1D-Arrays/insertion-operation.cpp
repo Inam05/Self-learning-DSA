@@ -16,19 +16,13 @@ int main()
 
     int arr[20];
     cout << "Enter the elements of the array: ";
-    for (int i = 0; i < n; i++)
+    int i;
+    for (i = 0; i < n; i++)
     {
         cin >> arr[i];
     }
 
-    cout << "Array elements are: ";
-    for (int i = 0; i < n; i++)
-    {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
     /*
-
     // Insertion at beginning
     cout << "Insertion at beginning: " << endl;
     int x;
@@ -51,6 +45,7 @@ int main()
     cout << endl;
     */
 
+    /*
     // Insertion at specific position
     int pos, x;
     cout << "Enter the insertion location (1-based index): ";
@@ -80,6 +75,18 @@ int main()
         cout << arr[i] << " ";
     }
     cout << endl;
+    */
 
+    // Insertion at end
+    int x;
+    cout << "Enter the element to be inserted: ";
+    cin >> x;
+    arr[i] = x;
+    n++;
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    
     return 0;
 }
