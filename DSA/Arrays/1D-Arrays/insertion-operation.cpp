@@ -27,6 +27,7 @@ int main()
         cout << arr[i] << " ";
     }
     cout << endl;
+    /*
 
     // Insertion at beginning
     cout << "Insertion at beginning: " << endl;
@@ -40,6 +41,37 @@ int main()
         arr[i] = arr[i - 1];
     }
     arr[0] = x;
+    n++;
+
+    cout << "Array after insertion: ";
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+    */
+
+    // Insertion at specific position
+    int pos, x;
+    cout << "Enter the insertion location (1-based index): ";
+    cin >> pos;
+
+    if (pos < 1 || pos > n + 1)
+    {
+        cout << "Invalid position!" << endl;
+        return 1;
+    }
+
+    cout << "Enter the element to be inserted: ";
+    cin >> x;
+
+    // Shift elements to the right to make space for the new element
+    for (int i = n; i >= pos; i--)
+    {
+        arr[i] = arr[i - 1];
+    }
+
+    arr[pos - 1] = x;
     n++;
 
     cout << "Array after insertion: ";
