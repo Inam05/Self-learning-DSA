@@ -11,24 +11,35 @@ We get the given array after rotating the initial array twice.
 #include <iostream>
 using namespace std;
 
-int countRotations(int arr[], int n)
+class RotationCounter
 {
-    int min = arr[0], min_index = 0;
-    for (int i = 0; i < n; i++)
+private:
+    int *arr;
+    int n;
+
+public:
+    RotationCounter(int arr[], int size) : arr(arr), n(size) {}
+
+    int countRotations()
     {
-        if (min > arr[i])
+        int min = arr[0], min_index = 0;
+        for (int i = 0; i < n; i++)
         {
-            min = arr[i];
-            min_index = i;
+            if (min > arr[i])
+            {
+                min = arr[i];
+                min_index = i;
+            }
         }
+        return min_index;
     }
-    return min_index;
-}
+};
 
 int main()
 {
     int arr[] = {15, 18, 2, 3, 6, 12};
     int n = sizeof(arr) / sizeof(arr[0]);
-    cout << countRotations(arr, n);
+    RotationCounter counter(arr, n);
+    cout << counter.countRotations() << endl;
     return 0;
 }
